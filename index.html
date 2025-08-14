@@ -1,18 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Complex system study via ABMS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Pedestrian Modeling & Visualization</title>
   <style>
-    body { font-family: sans-serif; padding: 2rem; }
-    img, video { max-width: 100%; height: auto; }
-    .section { margin-bottom: 2rem; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      max-width: 900px;
+      margin: auto;
+      padding: 2em;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .gif-container {
+      text-align: center;
+      margin: 2em 0;
+    }
+    .tech-list, .dataset-list {
+      list-style-type: square;
+      margin-left: 2em;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .citation {
+      font-style: italic;
+      font-size: 0.95em;
+    }
   </style>
 </head>
 <body>
-<p><a href="https://askimon.github.io/">🏠 Home</a></p>
+  <p><a href="https://askimon.github.io/">🏠 Home</a></p>
+  <h1>Reconstructing Real-Time 3D Pedestrian Motion from 2D Trajectories</h1>
 
+  <h2>🔍 Project Overview</h2>
+  <p>
+    This project aims to reconstruct and visualize real-world multi-pedestrian trajectories in a 3D environment. 
+    It incorporates spatial features such as walls, exits, and pillars to replicate actual indoor or outdoor environments. 
+    Using Python-based 3D rendering engines, the visualization simulates pedestrian movements in near real-time, supporting 
+    research in crowd behavior, space utilization, and model validation.
+  </p>
 
+  <div class="gif-container">
+    <!-- Replace with actual .gif filename or GitHub raw link -->
+    <img src="3d-pedestrian-demo.gif" alt="3D pedestrian simulation demo" width="80%" />
+    <p><small>Figure: Sample 3D simulation of pedestrians moving through an environment.</small></p>
+  </div>
+
+  <h2>🧰 Technologies Used</h2>
+  <ul class="tech-list">
+    <li><strong>Python</strong> – core logic, data loading, and agent control</li>
+    <li><strong>vedo</strong> – lightweight 3D visualization framework based on VTK</li>
+    <li><strong>NumPy / Pandas</strong> – trajectory data preprocessing</li>
+    <li><strong>Shapely</strong> – 2D geometry for walls and obstacle modeling</li>
+    <li><strong>Jupyter Notebook</strong> – for prototyping and live debugging</li>
+  </ul>
+
+  <h2>📦 Dataset</h2>
+  <ul class="dataset-list">
+    <li>
+      <a href="https://dil.atr.jp/ISL/crest2010_HRI/ATC_dataset/" target="_blank">
+        ATC Pedestrian Trajectory Dataset
+      </a> – Collected from a real-world shopping mall environment by ATR, Japan
+    </li>
+  </ul>
+  <p class="citation">
+    D. Brscic, T. Kanda, T. Ikeda, T. Miyashita, "Person position and body direction tracking in large public spaces using 3D range sensors", IEEE Transactions on Human-Machine Systems, Vol. 43, No. 6, pp. 522-534, 2013
+  </p>
+
+  <h2>🎯 Goals & Applications</h2>
+  <ul class="tech-list">
+    <li>Model and reproduce realistic pedestrian behaviors in 3D space</li>
+    <li>Test and visualize agent-based models in real environments</li>
+    <li>Analyze space usage and crowd interactions using actual layout geometry</li>
+    <li>Support further work on evacuation simulation and AI behavior learning</li>
+  </ul>
+
+  <h2>🚧 Current Status</h2>
+  <p>
+    ✔️ Basic 3D agent animation implemented using vedo<br/>
+    🔄 Working on environment mesh import and interactive controls<br/>
+    📈 Planning to integrate statistical analysis tools and export options
+  </p>
+
+  <footer style="margin-top: 3em; font-size: 0.85em; color: #666;">
+    Last updated: June 2025 • Author: Sanjjamts Amartaivan
+  </footer>
 
 </body>
 </html>
